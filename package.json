@@ -10,7 +10,7 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:extension.helloWorld"
+    "onCommand:extension.createBasicWebpackConfiguration"
   ],
   "main": "./src/extension.js",
   "contributes": {
@@ -19,7 +19,23 @@
         "command": "extension.createBasicWebpackConfiguration",
         "title": "Compose Basic Webpack Configuration"
       }
-    ]
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Webpack-Composer Configuration",
+      "properties": {
+        "webpackcomposer.rootDirectory": {
+          "description": "The root directory of your project.  This should be a relative path that houses your package.json and webpack.config.js and will be used as the relative base-path for all other settings.\n\nNote: You typically only want to set this in workspace settings.",
+          "type": "string",
+          "default": "."
+        },
+        "webpackcomposer.targetDirectory": {
+          "description": "The directory that will house all supplemental configurations and helper methods for your Webpack tooling.",
+          "type": "string",
+          "default": "./utils/build-utils/webpack"
+        }
+      }
+    }
   },
   "scripts": {
     "postinstall": "node ./node_modules/vscode/bin/install",
