@@ -13,5 +13,11 @@ before_install:
 install:
   - npm install
 
-script:
-  - npm test
+jobs:
+  include:
+    - stage: test
+      script:
+        - npm test
+    - stage: release
+      script:
+        - npx semantic-release

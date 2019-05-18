@@ -2,7 +2,7 @@
   "name": "webpack-composer",
   "displayName": "webpack-composer",
   "description": "A tool to quickly build and compose Webpack configurations.",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "engines": {
     "vscode": "^1.33.0"
   },
@@ -23,7 +23,8 @@
   },
   "scripts": {
     "postinstall": "node ./node_modules/vscode/bin/install",
-    "test": "node ./node_modules/vscode/bin/test"
+    "test": "node ./node_modules/vscode/bin/test",
+    "semantic-release": "semantic-release"
   },
   "devDependencies": {
     "@types/mocha": "^2.2.42",
@@ -32,6 +33,11 @@
     "eslint": "^5.13.0",
     "sinon": "~7.3.2",
     "typescript": "^3.3.1",
-    "vscode": "^1.1.28"
+    "vscode": "^1.1.28",
+    "semantic-release": "^15.13.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tbhesswebber/webpack-composer.git"
   }
 }
